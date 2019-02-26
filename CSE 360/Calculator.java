@@ -46,7 +46,7 @@ public class Calculator {
 	 */
 	public int getTotal () {
 		
-		return 0;
+		return total;
 		
 	}
 	
@@ -55,6 +55,8 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		
+		total += value;
+		
 	}
 	
 	/**
@@ -62,12 +64,16 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		
+		total -= value;
+
 	}
 	
 	/**
 	 * A method which multiplies the given parameter with the total variable.
 	 */
 	public void multiply (int value) {
+		
+		total *= value;
 		
 	}
 	
@@ -76,10 +82,15 @@ public class Calculator {
 	 */
 	public void divide (int value) {
 		
+		if (value == 0) 
+			total = 0;
+		else 
+			total /= value;
+		
 	}
 	
 	/**
-	 * A method which returns an empty string.
+	 * A get method which returns an empty string.
 	 */
 	public String getHistory () {
 		
